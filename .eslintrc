@@ -14,6 +14,7 @@
     "eol-last": "off",
     "import/no-named-as-default-member": "off",
     "import/no-named-as-default": "off",
-    "react/prefer-stateless-function": "off"
+    "react/prefer-stateless-function": "off",
+    "import/prefer-default-export": "off"
   }
 }

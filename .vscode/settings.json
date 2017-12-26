@@ -1,9 +1,16 @@
-{ // Configure glob patterns for excluding files and folders.
+{
+  // Configure glob patterns for excluding files and folders.
   "files.exclude": {
     "*/**/node_modules": true,
     "*/**/.serverless": true,
     ".nyc_output": true,
     "coverage": true,
     "package-lock.json": true
+  },
+  "files.associations": {
+    "**/src/actions/**/.js": "javascript",
+    "**/src/reducers/**/.js": "javascript",
+    "**/src/store/**/.js": "javascript",
+    "**/src/**/*.js": "javascriptreact"
   }
 }
