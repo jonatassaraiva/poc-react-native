@@ -1,6 +1,6 @@
-import packageInfo from '../../../../package.json';
+import packageInfo from '../../../../../package.json';
 
-import typesApplicationActions from './types.application.actions';
+import typesApplicationActions from './fetch.application.types';
 
 //
 // private actions
@@ -13,8 +13,7 @@ const fetchSucess = payload => ({
   payload
 });
 
-// export
-export const fetchApplication = () => (dispatch) => {
+export default () => (dispatch) => {
   dispatch(fetch());
 
   setTimeout(() => {

@@ -1,11 +1,9 @@
-import { fetchApplication } from './fetch.application.action';
-import typesApplicationActions from './types.application.actions';
+import fetchApplicationAction from './fetch/fetch.application.action';
+import fetchApplicationTypes from './fetch/fetch.application.types';
 
-const application = {
-  actions: {
-    fetchApplication
-  },
-  types: { ...typesApplicationActions }
+export default {
+  fetchApplication: fetchApplicationAction,
+  types: {
+    ...fetchApplicationTypes
+  }
 };
-
-export default application;

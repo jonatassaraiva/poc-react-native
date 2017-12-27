@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Text, View, ActivityIndicator } from 'react-native';
 import { connect } from 'react-redux';
 
-import applicationActions from '../../redux/actions/application';
+import { applicationActions } from '../../redux/actions';
 import styles from './home.style';
 
 class HomeScreen extends Component {
@@ -44,7 +44,7 @@ const mapStateToProps = ({ application }) => {
 };
 
 const mapActionsToProps = {
-  fetchApplication: applicationActions.actions.fetchApplication
+  fetchApplication: applicationActions.fetchApplication
 };
 
 export default connect(mapStateToProps, mapActionsToProps)(HomeScreen);

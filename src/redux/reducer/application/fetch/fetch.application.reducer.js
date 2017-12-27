@@ -1,4 +1,4 @@
-import application from '../../actions/application';
+import { applicationActions } from '../../../actions';
 
 const initialState = {
   initialState: true,
@@ -13,10 +13,10 @@ const initialState = {
 
 export default (state = initialState, action) => {
   switch (action.type) {
-    case application.types.FETCH_APPLICATION: {
+    case applicationActions.types.FETCH_APPLICATION: {
       return { ...state, initialState: false, loading: true };
     }
-    case application.types.FETCH_APPLICATION_SUCCESS: {
+    case applicationActions.types.FETCH_APPLICATION_SUCCESS: {
       const { name, version } = action.payload;
       return { ...state, loading: false, payload: { name, version } };
     }
