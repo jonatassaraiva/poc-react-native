@@ -1,9 +1,9 @@
 import { Navigation, ScreenVisibilityListener } from 'react-native-navigation';
 
-import { HomeScreen } from './home/home.screen';
+import HomeScreen from './home/home.screen';
 
 export function registerScreens(store, Provider) {
-  Navigation.registerComponent('PocReactNative.Home', () => HomeScreen);
+  Navigation.registerComponent('PocReactNative.Home', () => HomeScreen, store, Provider);
 }
 
 export function registerScreenVisibilityListener() {

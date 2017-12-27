@@ -1,9 +1,16 @@
-import React, { Component } from 'react';
+import React from 'react';
+
+import { Provider } from 'react-redux';
+
 import { Navigation } from 'react-native-navigation';
 
+//
+// internal modules
+import store from './redux/store.redux';
 import { registerScreens, registerScreenVisibilityListener } from './screens';
 
-registerScreens();
+const instaceStore = store.configure();
+registerScreens(instaceStore, Provider);
 registerScreenVisibilityListener();
 
 const navigatorStyle = {
@@ -15,7 +22,7 @@ const navigatorStyle = {
   orientation: 'portrait'
 };
 
-export default class App extends Component {
+export default class App extends React.Component {
   constructor(props) {
     super(props);
     this.startApp();
