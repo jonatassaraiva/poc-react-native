@@ -28,8 +28,7 @@ export default class App extends Component {
         navigatorStyle: {
           ...navigatorStyle,
           navBarHidden: true,
-          orientation: 'portrait',
-          screenBackgroundColor: '#002C59'
+          orientation: 'portrait'
         },
         animationType: 'fade'
       }
